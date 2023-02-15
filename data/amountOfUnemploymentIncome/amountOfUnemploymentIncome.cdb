@@ -1,0 +1,918 @@
+R00001.00    [PUBID]                                        Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             PUBID, YOUTH CASE IDENTIFICATION CODE
+ 
+COMMENT: YOUTH CASE IDENTIFICATION CODE
+ 
+       0           0
+     998           1 TO 999
+     999        1000 TO 1999
+     997        2000 TO 2999
+     996        3000 TO 3999
+     998        4000 TO 4999
+     996        5000 TO 5999
+     994        6000 TO 6999
+     994        7000 TO 7999
+     989        8000 TO 8999
+      23        9000 TO 9999
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:           9022        Mean:              4504.3
+ 
+Lead In: R72976.00[Default]
+Default Next Question: R05363.00
+--------------------------------------------------------------------------------
+Z90825.00    [CVC_AMT_UI_YR.00]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 00
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      21           1 TO 499
+      12         500 TO 999
+       9        1000 TO 1499
+       4        1500 TO 1999
+       3        2000 TO 2499
+       2        2500 TO 2999
+       1        3000 TO 3499
+       1        3500 TO 3999
+       0        4000 TO 4499
+       0        4500 TO 4999
+       0        5000 TO 6999
+       2        7000 TO 99999999: 7000+
+  -------
+      55
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>      58   VALID SKIP(-4)    8926     NON-INTERVIEW(-5)       0
+ 
+Min:             22        Max:          14817        Mean:             1306.91
+ 
+Lead In: Z90824.00[Default]
+Default Next Question: Z90826.00
+--------------------------------------------------------------------------------
+Z90826.00    [CVC_AMT_UI_YR.01]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 01
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      30           1 TO 499
+      23         500 TO 999
+      16        1000 TO 1499
+      11        1500 TO 1999
+      12        2000 TO 2499
+       4        2500 TO 2999
+       6        3000 TO 3499
+       5        3500 TO 3999
+       2        4000 TO 4499
+       2        4500 TO 4999
+       8        5000 TO 6999
+       5        7000 TO 99999999: 7000+
+  -------
+     124
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      11
+TOTAL =========>     135   VALID SKIP(-4)    8849     NON-INTERVIEW(-5)       0
+ 
+Min:             14        Max:          21371        Mean:              2142.3
+ 
+Lead In: Z90825.00[Default]
+Default Next Question: Z90827.00
+--------------------------------------------------------------------------------
+Z90827.00    [CVC_AMT_UI_YR.02]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 02
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       1           0
+      36           1 TO 499
+      34         500 TO 999
+      27        1000 TO 1499
+      17        1500 TO 1999
+      15        2000 TO 2499
+       7        2500 TO 2999
+       7        3000 TO 3499
+       5        3500 TO 3999
+       9        4000 TO 4499
+       6        4500 TO 4999
+      15        5000 TO 6999
+      18        7000 TO 99999999: 7000+
+  -------
+     197
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      16
+TOTAL =========>     213   VALID SKIP(-4)    8771     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          41172        Mean:             2915.06
+ 
+Lead In: Z90826.00[Default]
+Default Next Question: Z90828.00
+--------------------------------------------------------------------------------
+Z90828.00    [CVC_AMT_UI_YR.03]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 03
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       1           0
+      53           1 TO 499
+      47         500 TO 999
+      37        1000 TO 1499
+      28        1500 TO 1999
+      21        2000 TO 2499
+      25        2500 TO 2999
+      22        3000 TO 3499
+      16        3500 TO 3999
+      13        4000 TO 4499
+       5        4500 TO 4999
+      16        5000 TO 6999
+      29        7000 TO 99999999: 7000+
+  -------
+     313
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      24
+TOTAL =========>     337   VALID SKIP(-4)    8647     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          13783        Mean:             2644.33
+ 
+Lead In: Z90827.00[Default]
+Default Next Question: Z90829.00
+--------------------------------------------------------------------------------
+Z90829.00    [CVC_AMT_UI_YR.04]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 04
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      44           1 TO 499
+      49         500 TO 999
+      45        1000 TO 1499
+      24        1500 TO 1999
+      22        2000 TO 2499
+      24        2500 TO 2999
+      17        3000 TO 3499
+      18        3500 TO 3999
+      12        4000 TO 4499
+       9        4500 TO 4999
+      20        5000 TO 6999
+      22        7000 TO 99999999: 7000+
+  -------
+     306
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      17
+TOTAL =========>     323   VALID SKIP(-4)    8661     NON-INTERVIEW(-5)       0
+ 
+Min:             16        Max:          26784        Mean:             2700.36
+ 
+Lead In: Z90828.00[Default]
+Default Next Question: Z90830.00
+--------------------------------------------------------------------------------
+Z90830.00    [CVC_AMT_UI_YR.05]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 05
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      44           1 TO 499
+      42         500 TO 999
+      31        1000 TO 1499
+      33        1500 TO 1999
+      28        2000 TO 2499
+      12        2500 TO 2999
+      12        3000 TO 3499
+      15        3500 TO 3999
+      11        4000 TO 4499
+       7        4500 TO 4999
+      18        5000 TO 6999
+      28        7000 TO 99999999: 7000+
+  -------
+     281
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      13
+TOTAL =========>     294   VALID SKIP(-4)    8690     NON-INTERVIEW(-5)       0
+ 
+Min:             36        Max:          26070        Mean:              2845.8
+ 
+Lead In: Z90829.00[Default]
+Default Next Question: Z90831.00
+--------------------------------------------------------------------------------
+Z90831.00    [CVC_AMT_UI_YR.06]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 06
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      34           1 TO 499
+      41         500 TO 999
+      21        1000 TO 1499
+      23        1500 TO 1999
+      23        2000 TO 2499
+      16        2500 TO 2999
+      15        3000 TO 3499
+      20        3500 TO 3999
+      14        4000 TO 4499
+       7        4500 TO 4999
+      30        5000 TO 6999
+      36        7000 TO 99999999: 7000+
+  -------
+     280
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      11
+TOTAL =========>     291   VALID SKIP(-4)    8693     NON-INTERVIEW(-5)       0
+ 
+Min:             21        Max:          15156        Mean:             3390.39
+ 
+Lead In: Z90830.00[Default]
+Default Next Question: Z90832.00
+--------------------------------------------------------------------------------
+Z90832.00    [CVC_AMT_UI_YR.07]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 07
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      29           1 TO 499
+      36         500 TO 999
+      32        1000 TO 1499
+      29        1500 TO 1999
+      24        2000 TO 2499
+       9        2500 TO 2999
+       9        3000 TO 3499
+      14        3500 TO 3999
+       5        4000 TO 4499
+      15        4500 TO 4999
+      36        5000 TO 6999
+      43        7000 TO 99999999: 7000+
+  -------
+     281
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      14
+TOTAL =========>     295   VALID SKIP(-4)    8689     NON-INTERVIEW(-5)       0
+ 
+Min:             15        Max:          22072        Mean:             3589.14
+ 
+Lead In: Z90831.00[Default]
+Default Next Question: Z90833.00
+--------------------------------------------------------------------------------
+Z90833.00    [CVC_AMT_UI_YR.08]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 08
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       1           0
+      49           1 TO 499
+      45         500 TO 999
+      38        1000 TO 1499
+      43        1500 TO 1999
+      35        2000 TO 2499
+      25        2500 TO 2999
+      18        3000 TO 3499
+      17        3500 TO 3999
+      16        4000 TO 4499
+      20        4500 TO 4999
+      44        5000 TO 6999
+      61        7000 TO 99999999: 7000+
+  -------
+     412
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      39
+TOTAL =========>     451   VALID SKIP(-4)    8533     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          26143        Mean:             3774.88
+ 
+Lead In: Z90832.00[Default]
+Default Next Question: Z90834.00
+--------------------------------------------------------------------------------
+Z90834.00    [CVC_AMT_UI_YR.09]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 09
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      54           1 TO 499
+      42         500 TO 999
+      56        1000 TO 1499
+      63        1500 TO 1999
+      36        2000 TO 2499
+      42        2500 TO 2999
+      39        3000 TO 3499
+      30        3500 TO 3999
+      22        4000 TO 4499
+      24        4500 TO 4999
+      74        5000 TO 6999
+     238        7000 TO 99999999: 7000+
+  -------
+     720
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      59
+TOTAL =========>     779   VALID SKIP(-4)    8205     NON-INTERVIEW(-5)       0
+ 
+Min:             10        Max:          93748        Mean:             6085.16
+ 
+Lead In: Z90833.00[Default]
+Default Next Question: Z90834.01
+--------------------------------------------------------------------------------
+Z90834.01    [CVC_AMT_UI_YR.10]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 10
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      42           1 TO 499
+      49         500 TO 999
+      42        1000 TO 1499
+      47        1500 TO 1999
+      47        2000 TO 2499
+      35        2500 TO 2999
+      40        3000 TO 3499
+      37        3500 TO 3999
+      30        4000 TO 4499
+      29        4500 TO 4999
+      82        5000 TO 6999
+     235        7000 TO 99999999: 7000+
+  -------
+     715
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      37
+TOTAL =========>     752   VALID SKIP(-4)    8232     NON-INTERVIEW(-5)       0
+ 
+Min:             20        Max:          35014        Mean:             6237.02
+ 
+Lead In: Z90834.00[Default]
+Default Next Question: Z90834.02
+--------------------------------------------------------------------------------
+Z90834.02    [CVC_AMT_UI_YR.11]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 11
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      47           1 TO 499
+      41         500 TO 999
+      49        1000 TO 1499
+      32        1500 TO 1999
+      36        2000 TO 2499
+      24        2500 TO 2999
+      24        3000 TO 3499
+      22        3500 TO 3999
+      21        4000 TO 4499
+      24        4500 TO 4999
+      53        5000 TO 6999
+     181        7000 TO 99999999: 7000+
+  -------
+     554
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      58
+TOTAL =========>     612   VALID SKIP(-4)    8372     NON-INTERVIEW(-5)       0
+ 
+Min:             16        Max:          31286        Mean:              6059.1
+ 
+Lead In: Z90834.01[Default]
+Default Next Question: Z90834.03
+--------------------------------------------------------------------------------
+Z90834.03    [CVC_AMT_UI_YR.12]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 12
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      27           1 TO 499
+      27         500 TO 999
+      27        1000 TO 1499
+      26        1500 TO 1999
+      25        2000 TO 2499
+      18        2500 TO 2999
+      16        3000 TO 3499
+      13        3500 TO 3999
+      11        4000 TO 4499
+      10        4500 TO 4999
+      52        5000 TO 6999
+     119        7000 TO 99999999: 7000+
+  -------
+     371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      53
+TOTAL =========>     424   VALID SKIP(-4)    8560     NON-INTERVIEW(-5)       0
+ 
+Min:             17        Max:          77592        Mean:             5945.47
+ 
+Lead In: Z90834.02[Default]
+Default Next Question: Z90834.04
+--------------------------------------------------------------------------------
+Z90834.04    [CVC_AMT_UI_YR.13]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 13
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      31           1 TO 499
+      22         500 TO 999
+      22        1000 TO 1499
+      17        1500 TO 1999
+      17        2000 TO 2499
+      26        2500 TO 2999
+      18        3000 TO 3499
+      14        3500 TO 3999
+      10        4000 TO 4499
+      11        4500 TO 4999
+      39        5000 TO 6999
+      86        7000 TO 99999999: 7000+
+  -------
+     313
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      66
+TOTAL =========>     379   VALID SKIP(-4)    8605     NON-INTERVIEW(-5)       0
+ 
+Min:             31        Max:          28679        Mean:             5403.81
+ 
+Lead In: Z90834.03[Default]
+Default Next Question: Z90834.05
+--------------------------------------------------------------------------------
+Z90834.05    [CVC_AMT_UI_YR.14]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 14
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       2           0
+      28           1 TO 499
+      25         500 TO 999
+      22        1000 TO 1499
+      13        1500 TO 1999
+      13        2000 TO 2499
+      12        2500 TO 2999
+      13        3000 TO 3499
+      14        3500 TO 3999
+      12        4000 TO 4499
+       8        4500 TO 4999
+      23        5000 TO 6999
+      38        7000 TO 99999999: 7000+
+  -------
+     223
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      57
+TOTAL =========>     280   VALID SKIP(-4)    8704     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          33371        Mean:             4111.79
+ 
+Lead In: Z90834.04[Default]
+Default Next Question: Z90834.06
+--------------------------------------------------------------------------------
+Z90834.06    [CVC_AMT_UI_YR.15]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 15
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      21           1 TO 499
+      16         500 TO 999
+      25        1000 TO 1499
+      19        1500 TO 1999
+      20        2000 TO 2499
+      12        2500 TO 2999
+      10        3000 TO 3499
+      10        3500 TO 3999
+       7        4000 TO 4499
+      10        4500 TO 4999
+      29        5000 TO 6999
+      41        7000 TO 99999999: 7000+
+  -------
+     220
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      53
+TOTAL =========>     273   VALID SKIP(-4)    8711     NON-INTERVIEW(-5)       0
+ 
+Min:             52        Max:          18346        Mean:             4090.25
+ 
+Lead In: Z90834.05[Default]
+Default Next Question: Z90834.07
+--------------------------------------------------------------------------------
+Z90834.07    [CVC_AMT_UI_YR.16]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 16
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      12           1 TO 499
+      14         500 TO 999
+      12        1000 TO 1499
+       4        1500 TO 1999
+      11        2000 TO 2499
+      11        2500 TO 2999
+      11        3000 TO 3499
+      10        3500 TO 3999
+       6        4000 TO 4499
+       3        4500 TO 4999
+      16        5000 TO 6999
+      39        7000 TO 99999999: 7000+
+  -------
+     149
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      37
+TOTAL =========>     186   VALID SKIP(-4)    8798     NON-INTERVIEW(-5)       0
+ 
+Min:            114        Max:          39274        Mean:             5255.15
+ 
+Lead In: Z90834.06[Default]
+Default Next Question: Z90834.08
+--------------------------------------------------------------------------------
+Z90834.08    [CVC_AMT_UI_YR.17]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 17
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+       7           1 TO 499
+      14         500 TO 999
+      12        1000 TO 1499
+      16        1500 TO 1999
+       7        2000 TO 2499
+      11        2500 TO 2999
+      10        3000 TO 3499
+       5        3500 TO 3999
+      10        4000 TO 4499
+       7        4500 TO 4999
+      20        5000 TO 6999
+      36        7000 TO 99999999: 7000+
+  -------
+     155
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      36
+TOTAL =========>     191   VALID SKIP(-4)    8793     NON-INTERVIEW(-5)       0
+ 
+Min:             43        Max:          36291        Mean:             5042.66
+ 
+Lead In: Z90834.07[Default]
+Default Next Question: Z90834.09
+--------------------------------------------------------------------------------
+Z90834.09    [CVC_AMT_UI_YR.18]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 18
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+      10           1 TO 499
+      14         500 TO 999
+       5        1000 TO 1499
+      11        1500 TO 1999
+       7        2000 TO 2499
+       6        2500 TO 2999
+      11        3000 TO 3499
+       5        3500 TO 3999
+       3        4000 TO 4499
+       5        4500 TO 4999
+      23        5000 TO 6999
+      23        7000 TO 99999999: 7000+
+  -------
+     123
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      34
+TOTAL =========>     157   VALID SKIP(-4)    8827     NON-INTERVIEW(-5)       0
+ 
+Min:             29        Max:          36291        Mean:             4939.77
+ 
+Lead In: Z90834.08[Default]
+Default Next Question: Z90834.10
+--------------------------------------------------------------------------------
+Z90834.10    [CVC_AMT_UI_YR.19]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 19
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+       8           1 TO 499
+       8         500 TO 999
+       9        1000 TO 1499
+      14        1500 TO 1999
+      10        2000 TO 2499
+      12        2500 TO 2999
+       6        3000 TO 3499
+       8        3500 TO 3999
+       5        4000 TO 4499
+       4        4500 TO 4999
+      14        5000 TO 6999
+      27        7000 TO 99999999: 7000+
+  -------
+     125
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      20
+TOTAL =========>     145   VALID SKIP(-4)    8839     NON-INTERVIEW(-5)       0
+ 
+Min:             22        Max:          27741        Mean:             4700.79
+ 
+Lead In: Z90834.09[Default]
+Default Next Question: Z90834.11
+--------------------------------------------------------------------------------
+Z90834.11    [CVC_AMT_UI_YR.20]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 20
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+       3           1 TO 499
+       6         500 TO 999
+       1        1000 TO 1499
+       4        1500 TO 1999
+       2        2000 TO 2499
+       4        2500 TO 2999
+       0        3000 TO 3499
+       3        3500 TO 3999
+       1        4000 TO 4499
+       2        4500 TO 4999
+       3        5000 TO 6999
+       4        7000 TO 99999999: 7000+
+  -------
+      33
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       5
+TOTAL =========>      38   VALID SKIP(-4)    8946     NON-INTERVIEW(-5)       0
+ 
+Min:            143        Max:           9900        Mean:              3192.3
+ 
+Lead In: Z90834.10[Default]
+Default Next Question: Z90835.00
+--------------------------------------------------------------------------------
+Z90835.00    [CVC_AMT_UI_YR.97]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 97
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+       1           1 TO 499
+       1         500 TO 999
+       1        1000 TO 1499
+       0        1500 TO 1999
+       0        2000 TO 2499
+       0        2500 TO 2999
+       0        3000 TO 3499
+       0        3500 TO 3999
+       0        4000 TO 4499
+       0        4500 TO 4999
+       0        5000 TO 6999
+       0        7000 TO 99999999: 7000+
+  -------
+       3
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>       6   VALID SKIP(-4)    8978     NON-INTERVIEW(-5)       0
+ 
+Min:            364        Max:           1386        Mean:              815.33
+ 
+Lead In: Z90834.11[Default]
+Default Next Question: Z90836.00
+--------------------------------------------------------------------------------
+Z90836.00    [CVC_AMT_UI_YR.98]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 98
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+       8           1 TO 499
+       3         500 TO 999
+       1        1000 TO 1499
+       1        1500 TO 1999
+       0        2000 TO 2499
+       0        2500 TO 2999
+       0        3000 TO 3499
+       0        3500 TO 3999
+       0        4000 TO 4499
+       0        4500 TO 4999
+       0        5000 TO 6999
+       0        7000 TO 99999999: 7000+
+  -------
+      13
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>      15   VALID SKIP(-4)    8969     NON-INTERVIEW(-5)       0
+ 
+Min:             57        Max:           1734        Mean:              548.23
+ 
+Lead In: Z90835.00[Default]
+Default Next Question: Z90837.00
+--------------------------------------------------------------------------------
+Z90837.00    [CVC_AMT_UI_YR.99]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AMOUNT UNEMPLOYMENT R RECEIVED YEAR 99
+ 
+CUMULATIVE VARIABLE: Total unemployment insurance benefits youth received during
+each year. This variable is created for all respondents regardless of interview 
+status in the current round; CVC_RND provides the actual round of the 
+respondent's most recent interview.
+ 
+       0           0
+       9           1 TO 499
+      11         500 TO 999
+       3        1000 TO 1499
+       4        1500 TO 1999
+       0        2000 TO 2499
+       1        2500 TO 2999
+       0        3000 TO 3499
+       0        3500 TO 3999
+       0        4000 TO 4499
+       2        4500 TO 4999
+       0        5000 TO 6999
+       0        7000 TO 99999999: 7000+
+  -------
+      30
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>      33   VALID SKIP(-4)    8951     NON-INTERVIEW(-5)       0
+ 
+Min:             54        Max:           4924        Mean:             1091.47
+ 
+Lead In: Z90836.00[Default]
+Default Next Question: Z90838.00
