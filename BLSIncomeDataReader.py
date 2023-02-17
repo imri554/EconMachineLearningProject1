@@ -20,38 +20,38 @@ class BLSIncomeDataReader:
 
         df = df.replace(to_replace=[-1, -2, -3, -4, -5], value=pd.NaT)
 
-        num_rows = df.shape[0]
-        num_cols = df.shape[1]
-        threshold = 0.5
+        # num_rows = df.shape[0]
+        # num_cols = df.shape[1]
+        # threshold = 0.5
 
-        num_cols_missing = (df.isna().sum() > threshold * num_rows).sum()
+        # num_cols_missing = (df.isna().sum() > threshold * num_rows).sum()
 
-        print("Number of columns with more than 50% missing data:", num_cols_missing)
-        print(num_cols_missing / num_cols)
+        # print("Number of columns with more than 50% missing data:", num_cols_missing)
+        # print(num_cols_missing / num_cols)
         
-        #we should drop columns that have more than 50% missing data
+        # #we should drop columns that have more than 50% missing data
 
-        # get list of columns with more than 50% of values missing
-        cols_to_drop = df.columns[df.isna().sum() > threshold * num_rows]
+        # # get list of columns with more than 50% of values missing
+        # cols_to_drop = df.columns[df.isna().sum() > threshold * num_rows]
 
-        # drop columns from DataFrame
-        df = df.drop(columns=cols_to_drop)
+        # # drop columns from DataFrame
+        # df = df.drop(columns=cols_to_drop)
 
-        print("Number of columns after dropping:", df.shape[1])
-        #df = df.fillna(df.mode().iloc[0])
-        #print(df.isnull().sum())
+        # print("Number of columns after dropping:", df.shape[1])
+        # #df = df.fillna(df.mode().iloc[0])
+        # #print(df.isnull().sum())
 
-        #check to make sure that we have at least 50% of values in each column
-        #if not, drop the column
+        # #check to make sure that we have at least 50% of values in each column
+        # #if not, drop the column
 
-        #now, imputation
+        # #now, imputation
         #impute with the most common value
         df = df.fillna(df.mode().iloc[0])
 
         return df
 
 
-test = BLSIncomeDataReader('proj1data/shortIncomeBLS/shortIncome.csv').load_data()
+test = BLSIncomeDataReader('data/yearlyIncome/yearlyIncome.csv').load_data()
 print(test)
 summary = test.describe()
 print(summary)
