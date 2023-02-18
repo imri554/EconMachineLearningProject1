@@ -34,6 +34,9 @@ incomeCols = incomeData.columns
 employmentHours = employmentHours.reindex(columns=incomeCols)
 gdpData = gdpData.reindex(columns=incomeCols)
 
+gdpData = gdpData.reset_index()
+employmentHours = employmentHours.reset_index()
+incomeData = incomeData.reset_index()
 
 ### need to reshape the sets to be 3d tensor that allows for the ltsm to work through the time steps
 #data = pd.concat([incomeData, employmentHours, gdpData], keys = ["income", "employmentHours", "gdp"])
@@ -57,7 +60,11 @@ features = 3
 
 numdata = data.reshape((-1, time_steps, features))
 
-y_oh = tf.keras.utils.to_categorical(y - y.min())
+target_array = np.array(incomeData)
+n_samples, n_timesteps = data.shape[:2]
+targetFeatures = 1
+target_array_3d = target_array.reshape(n_samples, n_timesteps, targetFeatures)
+
 
 #lets try to predict income from wages and salary in the past year 2019
 #U4282300
