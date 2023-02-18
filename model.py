@@ -60,15 +60,11 @@ features = 3
 
 numdata = data.reshape((-1, time_steps, features))
 
-target_array = np.array(incomeData)
-n_samples, n_timesteps = data.shape[:2]
+yValues = incomeData["2019"].values
+time_steps = incomeData.shape[1]
 targetFeatures = 1
-target_array_3d = target_array.reshape(n_samples, n_timesteps, targetFeatures)
+target_array_3d = yValues.reshape((-1, time_steps, targetFeatures))
 
-
-#lets try to predict income from wages and salary in the past year 2019
-#U4282300
-input_shape = (num_samples, num_timesteps, num_features)
 
 ###is this important? seems to take a way a lot of the data
 # scaler = MinMaxScaler()
