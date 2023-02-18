@@ -28,12 +28,21 @@ gdpData = gdpData[1:] #take the data less the header row
 gdpData.columns = new_header #set the header row as the df header
 gdpData = gdpData.drop(columns=[gdpData.columns[0]])
 gdpData = pd.concat([gdpData]*8984)
+
+incomeData = incomeData.drop(columns=["R0000100"])
 #gdpData['measure'] = "gdp"
+
+incomeData = incomeData.reset_index()
+gdpData = gdpData.reset_index()
+employmentHours = employmentHours.reset_index()
 
 ### need to reshape the sets to be 3d tensor that allows for the ltsm to work through the time steps
 #data = pd.concat([incomeData, employmentHours, gdpData], keys = ["income", "employmentHours", "gdp"])
-data = pd.concat([gdpData, incomeData, employmentHours], keys = ["gdp", "income", "employmentHours"])
+data = pd.concat([gdpData, employmentHours, incomeData], axis = 1)
+#data = pd.concat([data, gdpData], keys = ["gdp"])
 
+#drop last column
+incomeData = incomeData.drop(columns=["R0000100"])
 
 #need to duplicate the GDP line so that it matches the other data sets
 #8983 times it should be
@@ -46,9 +55,9 @@ data = pd.concat([gdpData, incomeData, employmentHours], keys = ["gdp", "income"
 #1961 - 2021
 num_timesteps = 60
 num_features = 3
-num_samples = data.shape[0]
+num_samples = int(data.shape[0] / 3) - 1
 
-x_3d = x.reshape(num_samples, num_timesteps, num_features)
+x_3d = data.values.reshape(num_samples, num_timesteps, num_features)
 
 y_oh = tf.keras.utils.to_categorical(y - y.min())
 
