@@ -39,9 +39,11 @@ sys.path.append('/Users/imrihaggin1/Library/CloudStorage/GoogleDrive-imri_haggin
 ### need to reshape the sets to be 3d tensor that allows for the ltsm to work through the time steps
 #data = pd.concat([incomeData, employmentHours, gdpData], keys = ["income", "employmentHours", "gdp"])
 data = pd.read_excel('data/collatedData.xlsx')
-data = data.drop(columns=['Unnamed: 0', 'Unnamed: 1'])
+data = data.drop(columns=['ID', 'RecordType'])
+
 #data = pd.concat([data, gdpData], keys = ["gdp"])
 data = data.to_numpy()
+
 time_steps = data.shape[1]
 features = 3
 
