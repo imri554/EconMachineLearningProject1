@@ -7,32 +7,30 @@ import sys
 
 sys.path.append('/Users/imrihaggin1/Library/CloudStorage/GoogleDrive-imri_haggin@brown.edu/My Drive/Brown Work/junior year/machinelearning/proj1')
 
-from BLSIncomeDataReader import BLSIncomeDataReader
-from blsEmploymentHoursParse import BLSEmploymentHoursReader
 
-#bring in the data
-incomeData = BLSIncomeDataReader('data/yearlyIncome/yearlyIncome.csv').load_data()
+# #bring in the data
+# incomeData = BLSIncomeDataReader('data/yearlyIncome/yearlyIncome.csv').load_data()
 
-incomeData.drop(columns=['R0000100'], axis=1)
-#incomeData['measure'] = "income"
+# incomeData.drop(columns=['R0000100'], axis=1)
+# #incomeData['measure'] = "income"
 
-employmentHours = BLSEmploymentHoursReader('data/employerHoursWithTitle/employerHoursWithTitle.csv').load_data()
+# employmentHours = BLSEmploymentHoursReader('data/employerHoursWithTitle/employerHoursWithTitle.csv').load_data()
 
 
-investmentData = pd.read_excel('data/aiInvestmentData.xlsx')
+# investmentData = pd.read_excel('data/aiInvestmentData.xlsx')
 
-gdpData = pd.read_excel('data/gdpAlone.xlsx')
-gdpData = gdpData.transpose()
-gdpData.reset_index(drop=True, inplace=True)
-new_header = gdpData.iloc[0] #grab the first row for the header
-gdpData = gdpData[1:] #take the data less the header row
-gdpData.columns = new_header #set the header row as the df header
-gdpData = gdpData.drop(columns=[gdpData.columns[0]])
-gdpData = pd.concat([gdpData]*8984)
-#gdpData.to_excel("gdpDataFormatted.xlsx")
+# gdpData = pd.read_excel('data/gdpAlone.xlsx')
+# gdpData = gdpData.transpose()
+# gdpData.reset_index(drop=True, inplace=True)
+# new_header = gdpData.iloc[0] #grab the first row for the header
+# gdpData = gdpData[1:] #take the data less the header row
+# gdpData.columns = new_header #set the header row as the df header
+# gdpData = gdpData.drop(columns=[gdpData.columns[0]])
+# gdpData = pd.concat([gdpData]*8984)
+# #gdpData.to_excel("gdpDataFormatted.xlsx")
 
-incomeData = incomeData.drop(columns=["R0000100"])
-incomeCols = incomeData.columns
+# incomeData = incomeData.drop(columns=["R0000100"])
+# incomeCols = incomeData.columns
 #incomeData.to_excel("incomeDataFormatted.xlsx")
 
 #employmentHours.to_excel("employmentHoursFormatted.xlsx")
@@ -41,9 +39,10 @@ incomeCols = incomeData.columns
 ### need to reshape the sets to be 3d tensor that allows for the ltsm to work through the time steps
 #data = pd.concat([incomeData, employmentHours, gdpData], keys = ["income", "employmentHours", "gdp"])
 data = pd.read_excel('data/collatedData.xlsx')
+data = data.drop(columns=['Unnamed: 0', 'Unnamed: 1'])
 #data = pd.concat([data, gdpData], keys = ["gdp"])
 data = data.to_numpy()
-time_steps = gdpData.shape[1]
+time_steps = data.shape[1]
 features = 3
 
 
@@ -58,7 +57,7 @@ features = 3
 #1961 - 2021
 
 
-data = data.reshape((-1, time_steps, features))
+data = data.reshape((-1, features, time_steps))
 
 yValues = incomeData["2019"].values
 yValues = np.reshape(yValues, (8984, 1))
