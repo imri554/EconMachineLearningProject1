@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 import pandas as pd
 import sys
+from sklearn.preprocessing import MinMaxScaler
 
 sys.path.append('/Users/imrihaggin1/Library/CloudStorage/GoogleDrive-imri_haggin@brown.edu/My Drive/Brown Work/junior year/machinelearning/proj1')
 
@@ -38,28 +39,24 @@ sys.path.append('/Users/imrihaggin1/Library/CloudStorage/GoogleDrive-imri_haggin
 
 ### need to reshape the sets to be 3d tensor that allows for the ltsm to work through the time steps
 #data = pd.concat([incomeData, employmentHours, gdpData], keys = ["income", "employmentHours", "gdp"])
-data = pd.read_excel('data/collatedData.xlsx')
+data = pd.read_excel('data/collatedData_copy.xlsx')
 data = data.drop(columns=['ID', 'RecordType'])
 
-#data = pd.concat([data, gdpData], keys = ["gdp"])
 data = data.to_numpy()
+
+scaler = MinMaxScaler()
+scaled_data = scaler.fit_transform(data)
+scaled_data = pd.DataFrame(scaled_data)
+
+
+data = scaled_data.to_numpy()
+
 
 time_steps = data.shape[1]
 features = 3
 
 
-#need to duplicate the GDP line so that it matches the other data sets
-#8983 times it should be
-
-
-
-# x = data.drop(columns=['R0536402']).values
-# y = data['R0536402'].values
-
-#1961 - 2021
-
-
-data = data.reshape((-1, features, time_steps))
+data = data.reshape((-1, time_steps, features))
 
 incomeData = pd.read_excel('incomeDataFormatted.xlsx')
 
@@ -80,17 +77,24 @@ y_train = np.array(y_train).astype('float32')
 x_test = np.array(x_test).astype('float32')
 y_test = np.array(y_test).astype('float32')
 
+
+# scaler = MinMaxScaler(feature_range=(0, 1))
+# x_train = scaler.fit_transform(x_train)
+# x_test = scaler.transform(x_test)
+
 # Define the LSTM model
 model = tf.keras.Sequential()
-model.add(tf.keras.layers.LSTM(units=128, input_shape=(3,61), return_sequences = True))
+optimizer = tf.keras.optimizers.RMSprop(clipnorm=1.0)
+
+model.add(tf.keras.layers.LSTM(units=128, input_shape=(15, 3), return_sequences = True))
 model.add(tf.keras.layers.LSTM(128))
 model.add(tf.keras.layers.Dense(1))
 
 # Compile the model
-model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mean_absolute_error', 'mean_squared_error'])
+model.compile(optimizer="adam", loss='mean_squared_error', metrics=['mean_absolute_error', 'mean_squared_error'])
 
 # Train the model
-history = model.fit(x_train, y_train, batch_size=32, epochs=50)
+history = model.fit(x_train, y_train, batch_size=32, epochs=10)
 
 # Evaluate the model
 loss, mae = model.evaluate(x_test, y_test)
