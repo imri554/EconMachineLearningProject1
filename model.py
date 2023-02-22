@@ -23,24 +23,24 @@ investmentData = pd.read_excel('data/aiInvestmentData.xlsx')
 
 gdpData = pd.read_excel('data/gdpAlone.xlsx')
 gdpData = gdpData.transpose()
+gdpData.reset_index(drop=True, inplace=True)
 new_header = gdpData.iloc[0] #grab the first row for the header
 gdpData = gdpData[1:] #take the data less the header row
 gdpData.columns = new_header #set the header row as the df header
 gdpData = gdpData.drop(columns=[gdpData.columns[0]])
 gdpData = pd.concat([gdpData]*8984)
+#gdpData.to_excel("gdpDataFormatted.xlsx")
 
 incomeData = incomeData.drop(columns=["R0000100"])
 incomeCols = incomeData.columns
-employmentHours = employmentHours.reindex(columns=incomeCols)
-gdpData = gdpData.reindex(columns=incomeCols)
+#incomeData.to_excel("incomeDataFormatted.xlsx")
 
-gdpData = gdpData.reset_index()
-employmentHours = employmentHours.reset_index()
-incomeData = incomeData.reset_index()
+#employmentHours.to_excel("employmentHoursFormatted.xlsx")
+#gdpData = gdpData.reindex(columns=incomeCols)
 
 ### need to reshape the sets to be 3d tensor that allows for the ltsm to work through the time steps
 #data = pd.concat([incomeData, employmentHours, gdpData], keys = ["income", "employmentHours", "gdp"])
-data = pd.concat([gdpData, employmentHours, incomeData], axis = 1)
+data = pd.read_excel('data/collatedData.xlsx')
 #data = pd.concat([data, gdpData], keys = ["gdp"])
 data = data.to_numpy()
 time_steps = gdpData.shape[1]
@@ -58,12 +58,11 @@ features = 3
 #1961 - 2021
 
 
-numdata = data.reshape((-1, time_steps, features))
+data = data.reshape((-1, time_steps, features))
 
 yValues = incomeData["2019"].values
-time_steps = incomeData.shape[1]
-targetFeatures = 1
-target_array_3d = yValues.reshape((-1, time_steps, targetFeatures))
+yValues = np.reshape(yValues, (8984, 1))
+
 
 
 ###is this important? seems to take a way a lot of the data
@@ -73,12 +72,16 @@ target_array_3d = yValues.reshape((-1, time_steps, targetFeatures))
 
 #print(data.columns)
 #test train split
-x_train, x_test, y_train, y_test = train_test_split(x_3d, y, test_size=0.2, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(data, yValues, test_size=0.2, random_state=42)
 
+x_train = np.array(x_train).astype('float32')
+y_train = np.array(y_train).astype('float32')
+x_test = np.array(x_test).astype('float32')
+y_test = np.array(y_test).astype('float32')
 
 # Define the LSTM model
 model = tf.keras.Sequential()
-model.add(tf.keras.layers.LSTM(units=128, input_shape=input_shape, return_sequences = True))
+model.add(tf.keras.layers.LSTM(units=128, input_shape=(20,3), return_sequences = True))
 model.add(tf.keras.layers.LSTM(64))
 model.add(tf.keras.layers.Dense(1))
 
