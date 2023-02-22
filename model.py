@@ -61,10 +61,10 @@ features = 3
 
 data = data.reshape((-1, features, time_steps))
 
+incomeData = pd.read_excel('incomeDataFormatted.xlsx')
+
 yValues = incomeData["2019"].values
 yValues = np.reshape(yValues, (8984, 1))
-
-
 
 ###is this important? seems to take a way a lot of the data
 # scaler = MinMaxScaler()
@@ -82,12 +82,12 @@ y_test = np.array(y_test).astype('float32')
 
 # Define the LSTM model
 model = tf.keras.Sequential()
-model.add(tf.keras.layers.LSTM(units=128, input_shape=(20,3), return_sequences = True))
-model.add(tf.keras.layers.LSTM(64))
+model.add(tf.keras.layers.LSTM(units=128, input_shape=(3,61), return_sequences = True))
+model.add(tf.keras.layers.LSTM(128))
 model.add(tf.keras.layers.Dense(1))
 
 # Compile the model
-model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mean_absolute_error', 'mean_squared_error', 'accu'])
+model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mean_absolute_error', 'mean_squared_error'])
 
 # Train the model
 history = model.fit(x_train, y_train, batch_size=32, epochs=50)
