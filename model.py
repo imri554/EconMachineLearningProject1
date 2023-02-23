@@ -4,7 +4,10 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 import pandas as pd
 import sys
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
+from tensorflow import keras
+
+
 
 sys.path.append('/Users/imrihaggin1/Library/CloudStorage/GoogleDrive-imri_haggin@brown.edu/My Drive/Brown Work/junior year/machinelearning/proj1')
 
@@ -45,11 +48,16 @@ data = data.drop(columns=['ID', 'RecordType'])
 data = data.to_numpy()
 
 scaler = MinMaxScaler()
-scaled_data = scaler.fit_transform(data)
-scaled_data = pd.DataFrame(scaled_data)
+scaled_data = scaler.fit(data)
+scaled_data = scaler.transform(data)
 
+data = scaled_data
 
-data = scaled_data.to_numpy()
+# scaler = MinMaxScaler()
+# scaled_data = scaler.fit_transform(data)
+# scaled_data = pd.DataFrame(scaled_data)
+
+# data = scaled_data.to_numpy()
 
 
 time_steps = data.shape[1]
@@ -78,30 +86,49 @@ x_test = np.array(x_test).astype('float32')
 y_test = np.array(y_test).astype('float32')
 
 
-# scaler = MinMaxScaler(feature_range=(0, 1))
-# x_train = scaler.fit_transform(x_train)
-# x_test = scaler.transform(x_test)
 
-# Define the LSTM model
+
+# Define the LSTM model-----------------------------------------------------------------------------------------------------
 model = tf.keras.Sequential()
 optimizer = tf.keras.optimizers.RMSprop(clipnorm=1.0)
 
-model.add(tf.keras.layers.LSTM(units=128, input_shape=(15, 3), return_sequences = True))
-model.add(tf.keras.layers.LSTM(128))
+model.add(tf.keras.layers.LSTM(units=128, input_shape=(15, 3), return_sequences = True, kernel_regularizer=tf.keras.regularizers.l2(0.01),  recurrent_regularizer=tf.keras.regularizers.l2(0.01),
+          bias_regularizer=tf.keras.regularizers.l2(0.01), dropout=0.2, recurrent_dropout=0.2))
+model.add(tf.keras.layers.LSTM(128, kernel_regularizer=tf.keras.regularizers.l2(0.01),
+          recurrent_regularizer=tf.keras.regularizers.l2(0.01), bias_regularizer=tf.keras.regularizers.l2(0.01),
+          dropout=0.2, recurrent_dropout=0.2))
 model.add(tf.keras.layers.Dense(1))
 
 # Compile the model
 model.compile(optimizer="adam", loss='mean_squared_error', metrics=['mean_absolute_error', 'mean_squared_error'])
 
+early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=10, verbose=1)
+
+
 # Train the model
-history = model.fit(x_train, y_train, batch_size=32, epochs=10)
+history = model.fit(x_train, y_train, batch_size=32, epochs=50, validation_data=(x_test, y_test), callbacks=[early_stopping])
 
 # Evaluate the model
-loss, mae = model.evaluate(x_test, y_test)
+loss, mae, mse = model.evaluate(x_test, y_test)
 
 print(f'Test loss: {loss:.4f}, Test MAE: {mae:.4f}')
 
 
 
-# Make predictions using the trained model
-#y_pred = model.predict(x_test)
+#RNN instead --------------------------------------------------------------------------------------------------------------
+# Define the RNN model
+# model = tf.keras.Sequential()
+# optimizer = tf.keras.optimizers.RMSprop(clipnorm=1.0)
+
+# model.add(tf.keras.layers.SimpleRNN(units=128, input_shape=(15, 3), return_sequences=True))
+# model.add(tf.keras.layers.SimpleRNN(units=128))
+# model.add(tf.keras.layers.Dense(1))
+
+# # Compile the model
+# model.compile(optimizer="adam", loss='mean_squared_error', metrics=['mean_absolute_error', 'mean_squared_error'])
+
+# # Train the model
+# history = model.fit(x_train, y_train, batch_size=32, epochs=50)
+
+# # Evaluate the model
+# loss = model.evaluate(x_test, y_test)
