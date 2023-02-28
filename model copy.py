@@ -60,6 +60,8 @@ scaled_data = scaler.transform(data)
 
 data = scaled_data
 
+data.fillna(0, inplace=True)
+
 # scaler = MinMaxScaler()
 # scaled_data = scaler.fit_transform(data)
 # scaled_data = pd.DataFrame(scaled_data)
