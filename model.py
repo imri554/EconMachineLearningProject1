@@ -11,37 +11,6 @@ from tensorflow import keras
 
 sys.path.append('/Users/imrihaggin1/Library/CloudStorage/GoogleDrive-imri_haggin@brown.edu/My Drive/Brown Work/junior year/machinelearning/proj1')
 
-
-# #bring in the data
-# incomeData = BLSIncomeDataReader('data/yearlyIncome/yearlyIncome.csv').load_data()
-
-# incomeData.drop(columns=['R0000100'], axis=1)
-# #incomeData['measure'] = "income"
-
-# employmentHours = BLSEmploymentHoursReader('data/employerHoursWithTitle/employerHoursWithTitle.csv').load_data()
-
-
-# investmentData = pd.read_excel('data/aiInvestmentData.xlsx')
-
-# gdpData = pd.read_excel('data/gdpAlone.xlsx')
-# gdpData = gdpData.transpose()
-# gdpData.reset_index(drop=True, inplace=True)
-# new_header = gdpData.iloc[0] #grab the first row for the header
-# gdpData = gdpData[1:] #take the data less the header row
-# gdpData.columns = new_header #set the header row as the df header
-# gdpData = gdpData.drop(columns=[gdpData.columns[0]])
-# gdpData = pd.concat([gdpData]*8984)
-# #gdpData.to_excel("gdpDataFormatted.xlsx")
-
-# incomeData = incomeData.drop(columns=["R0000100"])
-# incomeCols = incomeData.columns
-#incomeData.to_excel("incomeDataFormatted.xlsx")
-
-#employmentHours.to_excel("employmentHoursFormatted.xlsx")
-#gdpData = gdpData.reindex(columns=incomeCols)
-
-### need to reshape the sets to be 3d tensor that allows for the ltsm to work through the time steps
-#data = pd.concat([incomeData, employmentHours, gdpData], keys = ["income", "employmentHours", "gdp"])
 data = pd.read_excel('data/collatedData_copy.xlsx')
 data = data.drop(columns=['ID', 'RecordType'])
 
